@@ -61,5 +61,10 @@ ul a .line {
   left: 0;
   width: 3%;
   border-bottom: 1px solid white;
+  transform: scaleX(0);
   transform-origin: left;
 }/*# sourceMappingURL=main.css.map */
+
+ul a p.date {
+  transform: translateY(170px);
+}

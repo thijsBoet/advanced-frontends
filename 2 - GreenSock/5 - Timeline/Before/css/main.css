@@ -21,6 +21,7 @@ body {
 }
 
 .fade1, .fade2, .fade3 {
+  transform: scaleY(0);
   transform-origin: top;
 }
 
@@ -43,4 +44,5 @@ h1 {
   font-family: "Inter", sans-serif;
   letter-spacing: -0.08em;
   z-index: 1;
+  transform: translateX(-100%);
 }/*# sourceMappingURL=main.css.map */

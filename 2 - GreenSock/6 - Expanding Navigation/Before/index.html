@@ -37,7 +37,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
+        const menuToggle = document.querySelector('.menu-toggle');
 
+        let menuStatus = false;
+
+        menuTL = gsap.timeline({ 
+            defaults: { 
+                duration: 0.5, ease: "power4.inOut" 
+            },
+            paused: true
+        });
+
+        menuTL.
+            to(['main', 'aside'], {
+                x: 0,
+                stagger: 0.2
+            })
+
+        menuToggle.addEventListener('click', () => {
+            if(!menuStatus) {
+                menuTL.play();
+                menuStatus = true;
+                menuToggle.classList.add('active');
+            } else {
+                menuTL.reverse();
+                menuStatus = false;
+                menuToggle.classList.remove('active');
+            }
+        });
 
     </script>
 </body>
